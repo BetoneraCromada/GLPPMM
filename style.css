@@ -1,0 +1,304 @@
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.1s;                                     
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.1s;
+}
+
+.show {
+    opacity: 1;
+    animation: showElement 1s forwards;
+    transition: all 2s;
+}
+
+@keyframes showElement {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: #101010;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 2000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    background-color: #10101088;
+    backdrop-filter: blur(10px); /* Aplica o efeito de desfoque */
+    
+    
+}
+
+
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li:hover {
+    
+    padding-top: 10px;
+    padding-right: 5px;
+    border-top: solid 2px white;
+}
+
+.apr{
+   display: flex;
+   flex-direction: row; 
+   gap: 30px;
+}
+
+
+
+
+
+/* Estilo para o título centralizado */
+.apr h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a estrutura de parágrafo e imagem lado a lado */
+.apr {
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-top: 150px;
+    background-color: #0e0e0e;
+    color: #fff;
+}
+
+.apr-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 80vw;
+    gap: 20px;
+}
+
+/* Estilo para o parágrafo */
+.apr-content p {
+    flex: 1;
+    margin: 0;
+}
+
+/* Estilo para a imagem */
+.apr-content img {
+    height: 400px;
+    border-radius: 10px;
+}
+
+.apr-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    border-left: solid 4px rgb(255, 255, 255);
+}
+
+
+
+table {
+    
+    border-collapse: collapse;
+    margin-top: 20px;
+    max-width: 80%;
+    
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #000000;
+}
+
+tr:hover {
+    background-color: #000000;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Estilo das estrelas */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+}
+
+  
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: twinkling 3s infinite;
+}
+  
+@keyframes twinkling {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.intro {
+    position: relative;
+    display: flex;
+   flex-direction: row; 
+   justify-content: center;
+}
+
+.intro img {
+    width: 1000px;
+    z-index: 100;
+}
+
+.intro h1 {
+    z-index: 101;
+    position: absolute;
+    font-size: 150px;
+    color: #ffffff;
+    text-shadow: rgb(0, 0, 0) 1px 0 20px;
+    font-family: 'Nasalization', sans-serif;
+    top: 440px;                           
+}
+
+.intro h4 {
+    z-index: 101;
+    position: absolute;
+    font-size: 25px;
+    color: #ffffff;
+    top: 595px;
+    /*Sem Prof left: 64%;*/  
+    left: 55%;    
+}
+
+.intro #earth {
+    width: 1000px;
+}
+
+.intro #astronaut {
+    z-index: 102;
+    top: 400px;
+    right: 200px;;
+    width: 1000px;
+    position: absolute;
+    animation: float 3s ease-in-out infinite, move 45s linear infinite;
+}
+
+/* Animação de flutuação (movimento para cima e para baixo) */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Animação de movimento horizontal (da esquerda para a direita) */
+@keyframes move {
+    0% {
+        left: -70%;
+    }
+    100% {
+        width: 200px;
+        left: 110%;
+        
+    }
+}
+
+.curiosidades ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+}
+
+.curiosidades ul li {
+    max-width: 70%;
+    list-style: none;
+    padding-left: 30px;
+    padding-top: 30px;
+    border-left: solid 4px white;
+}
+
+footer {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1rem;
+}
